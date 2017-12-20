@@ -1,0 +1,22 @@
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">게시판</a>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <% unless current_user %>
+        <a class="nav-item nav-link" href="/login">로그인</a>
+        <a class="nav-item nav-link" href="/signup">회원가입</a>
+        <% else %>
+        <span class="navbar-brand mb-0 h1"><%= current_user.email%>님</span>
+        <a class="nav-item nav-link" href="/logout">로그아웃</a>
+        <% end %>
+        <a class="nav-item nav-link" href="/admin">관리자</a>
+      </div>
+    </div>
+  </nav>
+  <% if flash[:notice] %>
+  <div class="alert-primary" role="alert"> <%= flash[:notice] %></div>
+  <% elsif flash[:alert] %>
+  <div class="alert-danger" role="alert"> <%= flash[:alert] %></div>
+  <% end %>
+</div>

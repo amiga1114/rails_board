@@ -1,6 +1,14 @@
-<h1>수정하기</h1>
-<form action="/posts/update/<%= @post.id %>">
-   제목 : <input type="text" name="title" value="<%= @post.title %>">
-  내용 : <input type="text" name="content" value="<%= @post.content %>">
-  <input type="submit">
-</form>
+<div class="container">
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-3">수정하기</h1>
+      <form action="/posts/update/<%= @post.id %>">
+        <label for="exampleInputEmail">제목</label>
+        <input type="text" class="form-control" name="title" value="<%= @post.title %>"><br>
+        <label for="exampleInputEmail">내용</label>
+        <input type="text" class="form-control" name="content" value="<%= @post.content %>"><br>
+        <button type="submit" class="btn btn-primary">등록</button>
+      </form>
+    </div>
+  </div>
+</div>

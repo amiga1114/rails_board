@@ -1,6 +1,14 @@
-<h1>새글쓰기</h1>
-<form action="/posts/create">
-   제목 : <input type="text" name="title">
-  내용 : <input type="text" name="content">
-  <input type="submit">
-</form>
+<div class="container">
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-3">새글쓰기</h1>
+      <form action="/posts/create">
+        <label for="exampleInputEmail">제목</label>
+        <input type="text" class="form-control" name="title" placeholder="제목을 입력하세요."><br>
+        <label for="exampleInputEmail">내용</label>
+        <input type="text" class="form-control" name="content" placeholder="내용을 입력하세요."><br>
+        <button type="submit" class="btn btn-primary">등록</button>
+      </form>
+    </div>
+  </div>
+</div>
